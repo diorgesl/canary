@@ -11,6 +11,7 @@
 #include "game/game.hpp"
 #include "map/map.hpp"
 #include "utils/tools.hpp"
+#include "creatures/players/grouping/party.hpp"
 
 uint32_t InstanceManager::createInstance(const std::shared_ptr<Player> &player, const std::string &mapName, const Position &entryPosition, const Position &exitPosition, bool isPartyInstance) {
 	if (!player) {
