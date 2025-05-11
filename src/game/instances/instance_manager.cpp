@@ -30,7 +30,7 @@ uint32_t InstanceManager::createInstance(const std::shared_ptr<Player> &player, 
 	if (isPartyInstance) {
 		auto party = player->getParty();
 		if (party) {
-			partyId = party->getID();
+			partyId = party->getLeader() ? party->getLeader()->getID() : 0;
 			auto partyInstanceIt = partyInstances.find(partyId);
 			if (partyInstanceIt != partyInstances.end()) {
 				// Party already has an instance, add player to it and return that ID
@@ -99,7 +99,7 @@ bool InstanceManager::teleportToInstance(const std::shared_ptr<Player> &player, 
 	// If this is a party instance, check if the player is in the party
 	if (instanceIt->second.isPartyInstance) {
 		auto party = player->getParty();
-		if (party && party->getID() == instanceIt->second.partyId) {
+		if (party && (party->getLeader() ? party->getLeader()->getID() : 0) == instanceIt->second.partyId) {
 			canEnter = true;
 		}
 	}
@@ -277,7 +277,7 @@ bool InstanceManager::teleportToPartyMemberInstance(const std::shared_ptr<Player
 	auto playerParty = player->getParty();
 	auto memberParty = partyMember->getParty();
 	
-	if (!playerParty || !memberParty || playerParty->getID() != memberParty->getID()) {
+	if (!playerParty || !memberParty || (playerParty->getLeader() ? playerParty->getLeader()->getID() : 0) != (memberParty->getLeader() ? memberParty->getLeader()->getID() : 0)) {
 		return false;
 	}
 	
