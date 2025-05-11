@@ -17,6 +17,7 @@ class Creature;
 class Item;
 class Container;
 class Npc;
+class Player;
 
 class LuaScriptInterface;
 class Cylinder;
