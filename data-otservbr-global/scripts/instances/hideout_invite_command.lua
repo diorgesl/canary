@@ -1,7 +1,7 @@
 -- Hideout Invite Command Script
 -- This script handles the !invite command to invite players to your hideout
 
-local inviteCommand = TalkAction("!invite", TALKACTION_FIRST_WORD)
+local inviteCommand = TalkAction("!invite")
 
 function inviteCommand.onSay(player, words, param)
     -- Check if player has a hideout

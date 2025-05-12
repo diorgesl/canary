@@ -1,7 +1,7 @@
 -- Hunting Instance Command
 -- This script handles the !hunt command to create a hunting instance
 
-local huntCommand = TalkAction("!hunt", TALKACTION_FIRST_WORD)
+local huntCommand = TalkAction("!hunt")
 
 function huntCommand.onSay(player, words, param)
     -- Check if player is already in an instance

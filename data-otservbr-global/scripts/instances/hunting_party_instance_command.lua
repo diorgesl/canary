@@ -1,7 +1,7 @@
 -- Hunting Party Instance Command
 -- This script handles the !partyinstance command to create a party hunting instance
 
-local partyInstanceCommand = TalkAction("!partyinstance", TALKACTION_FIRST_WORD)
+local partyInstanceCommand = TalkAction("!partyinstance")
 
 function partyInstanceCommand.onSay(player, words, param)
     -- Check if player is in a party

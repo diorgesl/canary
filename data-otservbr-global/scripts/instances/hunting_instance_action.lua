@@ -28,7 +28,7 @@ huntingInstanceAction:id(1945) -- Replace with the actual item ID
 huntingInstanceAction:register()
 
 -- Handle the dialog response
-local huntingInstanceDialog = TalkAction("!hunt", TALKACTION_FIRST_WORD)
+local huntingInstanceDialog = TalkAction("!hunt")
 
 function huntingInstanceDialog.onSay(player, words, param)
     -- Check if player has opened the dialog
@@ -69,7 +69,7 @@ huntingInstanceDialog:separator(" ")
 huntingInstanceDialog:register()
 
 -- Add a talk action to leave the hunting instance
-local leaveInstanceAction = TalkAction("!leave", TALKACTION_FIRST_WORD)
+local leaveInstanceAction = TalkAction("!leave")
 
 function leaveInstanceAction.onSay(player, words, param)
     leaveHuntingInstance(player)

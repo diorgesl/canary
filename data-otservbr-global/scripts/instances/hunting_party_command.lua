@@ -1,7 +1,7 @@
 -- Hunting Party Command
 -- This script handles the !joinparty command to join a party member's hunting instance
 
-local joinPartyCommand = TalkAction("!joinparty", TALKACTION_FIRST_WORD)
+local joinPartyCommand = TalkAction("!joinparty")
 
 function joinPartyCommand.onSay(player, words, param)
     -- Check if player is in a party
