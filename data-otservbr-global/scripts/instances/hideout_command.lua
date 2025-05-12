@@ -1,7 +1,7 @@
 -- Hideout Command Script
 -- This script handles the !hideout command to teleport to the player's hideout
 
-local hideoutCommand = TalkAction("!hideout")
+local hideoutCommand = TalkAction("!hideout", TALKACTION_FIRST_WORD)
 
 function hideoutCommand.onSay(player, words, param)
     -- Check if player already has a hideout instance

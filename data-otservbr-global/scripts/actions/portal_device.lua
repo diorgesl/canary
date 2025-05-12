@@ -257,7 +257,7 @@ portalDevice:register()
 -- Register portal action
 local portalAction = Action()
 portalAction:id(PORTAL_ITEM_ID)
-portalAction:function(onUsePortal)
+portalAction:onUse(onUsePortal)
 portalAction:register()
 
 -- Helper functions for instance data management

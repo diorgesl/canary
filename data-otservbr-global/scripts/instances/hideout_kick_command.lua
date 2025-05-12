@@ -1,7 +1,7 @@
 -- Hideout Kick Command Script
 -- This script handles the !kick command to remove players from your hideout
 
-local kickCommand = TalkAction("!kick")
+local kickCommand = TalkAction("!kick", TALKACTION_FIRST_WORD)
 
 function kickCommand.onSay(player, words, param)
     -- Check if player has a hideout
