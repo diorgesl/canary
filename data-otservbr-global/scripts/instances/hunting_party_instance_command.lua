@@ -27,4 +27,5 @@ function partyInstanceCommand.onSay(player, words, param)
     return createHuntingInstance(player, mapType, true)
 end
 
+partyInstanceCommand:groupType("normal")
 partyInstanceCommand:register()

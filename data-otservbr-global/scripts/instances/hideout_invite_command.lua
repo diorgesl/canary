@@ -85,4 +85,5 @@ function sendHideoutInvitation(inviter, invitee, hideoutId)
     window:sendToPlayer(invitee)
 end
 
+inviteCommand:groupType("normal")
 inviteCommand:register()

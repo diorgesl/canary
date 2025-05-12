@@ -65,4 +65,5 @@ function createPlayerHideout(playerId)
     return instanceId
 end
 
+hideoutCommand:groupType("normal")
 hideoutCommand:register()

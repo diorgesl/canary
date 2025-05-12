@@ -66,6 +66,7 @@ function huntingInstanceDialog.onSay(player, words, param)
 end
 
 huntingInstanceDialog:separator(" ")
+huntingInstanceDialog:groupType("normal")
 huntingInstanceDialog:register()
 
 -- Add a talk action to leave the hunting instance
@@ -76,4 +77,5 @@ function leaveInstanceAction.onSay(player, words, param)
     return true
 end
 
+leaveInstanceAction:groupType("normal")
 leaveInstanceAction:register()

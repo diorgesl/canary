@@ -21,4 +21,5 @@ function joinPartyCommand.onSay(player, words, param)
     return joinPartyInstance(player)
 end
 
+joinPartyCommand:groupType("normal")
 joinPartyCommand:register()

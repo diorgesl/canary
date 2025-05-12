@@ -58,4 +58,5 @@ function kickCommand.onSay(player, words, param)
     return true
 end
 
+kickCommand:groupType("normal")
 kickCommand:register()

@@ -20,4 +20,5 @@ function huntCommand.onSay(player, words, param)
     return createHuntingInstance(player, mapType, false)
 end
 
+huntCommand:groupType("normal")
 huntCommand:register()
